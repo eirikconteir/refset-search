@@ -7,7 +7,7 @@ yarn start
 
 # Deploy
 
-Deploy to https://snomed-search.netlify.com:
+Deploy to https://refset-search.netlify.com:
 
 ```bash
 yarn build
