@@ -7,7 +7,7 @@ export const defaultBranch = "MAIN/SNOMEDCT-NO-EXTENDED";
 
 export const hosts = [
   "https://snowstorm.rundberg.no",
-  "https://snowstorm.test.nhn.no",
+  "https://terminologi.ehelse.no",
 ];
 
 export const codeSystems = [
@@ -56,6 +56,10 @@ export const referenceSets = [
   {
     id: "1291000202106",
     title: "Infeksjonssykdommer følsomme for antibiotika",
+  },
+  {
+    id: "2041000202101",
+    title: "Kristines hipster refset",
   },
   {
     id: "1311000202107",
