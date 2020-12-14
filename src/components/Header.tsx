@@ -24,7 +24,7 @@ const Header = ({ scope }: HeaderProps) => {
             </li>
             <li className={itemClassNames("trial")}>
               <Link className="nav-link" to="/?scope=trial">
-                Clinical Trials
+                Clinical Trialz
               </Link>
             </li>
             {false && (
