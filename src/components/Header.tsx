@@ -14,7 +14,9 @@ const Header = ({ scope }: HeaderProps) => {
   };
   return (
     <header className="row">
-      <HTMLHeadingElement>Eirik er best</HTMLHeadingElement>
+      <div>
+      <h1>SFPOPOS</h1>
+    </div>
       <div className="col">
         <nav className="navbar navbar-expand mb-3">
           <ul className="navbar-nav mr-auto">
