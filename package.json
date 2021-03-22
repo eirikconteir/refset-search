@@ -44,5 +44,9 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "main": "index.js",
+  "repository": "https://github.com/eirikconteir/refset-search.git",
+  "author": "Eirik Hafver Rønjum <64041578+eirikconteir@users.noreply.github.com>",
+  "license": "MIT"
 }

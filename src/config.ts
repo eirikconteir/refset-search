@@ -3,11 +3,12 @@ export const clinicalTrialsUrl =
 
 export const episerverUrl = "http://localhost:51338/sokeside/snomed";
 
-export const defaultBranch = "MAIN/SNOMEDCT-NO-EXTENDED";
+export const defaultBranch = "MAIN/SNOMEDCT-NO";
 
 export const hosts = [
+  "https://snowstorm.conteir.no",
   "https://snowstorm.rundberg.no",
-  "https://terminologi.ehelse.no",
+  "https://test.terminologi.ehelse.no",
 ];
 
 export const codeSystems = [
