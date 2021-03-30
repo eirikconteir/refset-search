@@ -8,6 +8,7 @@ import Error from "../components/Error";
 import Form from "../components/Form";
 import Header from "../components/Header";
 import Loading from "../components/Loading";
+import { BrowserRouter } from "react-router-dom";
 import { defaultBranch, referenceSets, hosts } from "../config";
 import { fetchBranches, fetchConcepts, IConceptResult } from "../store";
 

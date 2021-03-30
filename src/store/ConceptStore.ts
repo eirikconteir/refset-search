@@ -31,6 +31,7 @@ export const fetchConcepts = (
   url.searchParams.set("active", "true");
   url.searchParams.set("groupByConcept", "true");
   url.searchParams.set("language", "no");
+  url.searchParams.append("language", "nb-NO");
   url.searchParams.append("language", "nb");
   url.searchParams.append("language", "nn");
   url.searchParams.append("language", "en");

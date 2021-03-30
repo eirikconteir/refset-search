@@ -18,7 +18,7 @@ export const fetchSynonyms = (
   conceptId: string,
 ) => {
   const url = new URL(`${branch}/descriptions`, host);
-  url.searchParams.set("concept", conceptId);
+  url.searchParams.set("conceptId", conceptId);
   url.searchParams.set("offset", "0");
   url.searchParams.set("limit", limit);
   return fetch(url.toString(), apiOptions).then((response) =>
