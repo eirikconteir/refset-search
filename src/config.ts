@@ -13,7 +13,7 @@ export const hosts = [
 
 export const codeSystems = [
   {
-    branch: "MAIN/ICPC2",
+    branch: "MAIN/ICPC-2",
     id: "450993002",
     title: "ICPC-2",
   },
@@ -21,12 +21,12 @@ export const codeSystems = [
     branch: "MAIN",
     id: "447562003",
     title: "ICD-10",
-  },
-  {
+  }
+  /*{
     branch: "MAIN/MAP",
     id: "2041000202101",
     title: "ATC",
-  },
+  },*/
 ];
 
 export const referenceSets = [
