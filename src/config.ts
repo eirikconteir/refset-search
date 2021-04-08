@@ -21,12 +21,12 @@ export const codeSystems = [
     branch: "MAIN",
     id: "447562003",
     title: "ICD-10",
-  }
-  /*{
-    branch: "MAIN/MAP",
+  },
+  {
+    branch: "MAIN/SNOMEDCT-NO/HELSEDIREKTORATET",
     id: "2041000202101",
     title: "ATC",
-  },*/
+  }
 ];
 
 export const referenceSets = [
