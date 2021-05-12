@@ -23,7 +23,7 @@ export const codeSystems = [
     title: "ICD-10",
   },
   {
-    branch: "MAIN/SNOMEDCT-NO/HELSEDIREKTORATET",
+    branch: "MAIN/MAP",
     id: "2041000202101",
     title: "ATC",
   }
@@ -33,6 +33,10 @@ export const referenceSets = [
   {
     id: "",
     title: "[Not specified]",
+  },
+  {
+    id: "12881000202101",
+    title: "Hannas drugs",
   },
   {
     id: "1981000202104",
