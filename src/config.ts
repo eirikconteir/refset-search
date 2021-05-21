@@ -26,7 +26,7 @@ export const codeSystems = [
     branch: "MAIN/MAP",
     id: "2041000202101",
     title: "ATC",
-  }
+  },
 ];
 
 export const referenceSets = [
@@ -35,40 +35,28 @@ export const referenceSets = [
     title: "[Not specified]",
   },
   {
-    id: "12881000202101",
-    title: "Hannas drugs",
-  },
-  {
-    id: "1981000202104",
-    title: "Målgruppe",
-  },
-  {
     id: "1991000202102",
     title: "Sykdommer",
-  },
-  {
-    id: "1971000202101",
-    title: "Behandlinger",
   },
   {
     id: "2001000202104",
     title: "Symptomer/plager",
   },
   {
-    id: "1271000202107",
-    title: "Råd for god helse",
+    id: "23921000202107",
+    title: "Virkestoff",
   },
   {
-    id: "1291000202106",
-    title: "Infeksjonssykdommer følsomme for antibiotika",
+    id: "12711000202103",
+    title: "Modifikatorer",
   },
   {
-    id: "2041000202101",
-    title: "Kristines hipster refset",
+    id: "23911000202104",
+    title: "Mengdeangivelse",
   },
   {
-    id: "1311000202107",
-    title: "Virkestoff med antibakteriell eller antimykotisk effekt",
+    id: "12881000202101",
+    title: "Legemidler",
   },
 ];
 
