@@ -58,6 +58,10 @@ export const referenceSets = [
     id: "12881000202101",
     title: "Legemidler",
   },
+  {
+    id: "23961000202102",
+    title: "Administrasjonvei",
+  },
 ];
 
 export const limit = "10";
