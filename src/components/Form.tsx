@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react";
 import { StringParam, useQueryParam } from "use-query-params";
-import { referenceSets } from "../config";
+import { certainReferenceSets } from "../config";
 import { IBranch } from "../store";
 
 type FormProps = {
@@ -78,7 +78,7 @@ const Form = ({
                   value={referenceSet}
                   onChange={handleReferenceSetChange}
                 >
-                  {referenceSets.map(({ id, title }) => (
+                  {certainReferenceSets.map(({ id, title }) => (
                     <option value={id} key={id}>
                       {title}
                     </option>

@@ -8,7 +8,7 @@ import Error from "../components/Error";
 import Form from "../components/Form";
 import Header from "../components/Header";
 import Loading from "../components/Loading";
-import { defaultBranch, referenceSets, hosts } from "../config";
+import { defaultBranch, referenceSets, hosts, certainReferenceSets } from "../config";
 import { fetchBranches, fetchConcepts, IConceptResult } from "../store";
 
 type SearchProps = {
@@ -26,11 +26,67 @@ const useSearch = () => {
   const debouncedSearch = useConstant(() => debounce(fetchConcepts, 500));
 
   const searchRequest = useAsync(async () => {
+
+    //creating an array of promises with type <IConceptResult>
+    //going to put there elements from refsets
+    let promises : Promise<IConceptResult>[] = [];
+
+
+    if (host && branch && query) {
+      //if do not use old refset
+      if(!referenceSet) {
+        // if refset is not specified, go to an array and taking each branch exept " "
+        certainReferenceSets.forEach(refset => {
+          if(refset.id !== "") {
+            promises.push(debouncedSearch(host, branch, query, refset.id));
+          }
+        });
+      } 
+      else {
+        //if refset is specified:
+        promises.push(debouncedSearch(host, branch, query, referenceSet || ""));
+        console.log("here are promises", promises);
+      }
+    }
+
+    // ...then:
+    return Promise.all(promises).then((resultArray) => {
+      if(Array.isArray(resultArray) && resultArray.length > 0) {
+        console.log("result array (refset with values", resultArray);
+        // arra
+        let finalResult : IConceptResult = {
+          totalElements: 0,
+          items: []
+        };
+
+        resultArray.forEach((result => {
+          // counter++
+          finalResult.totalElements += result.totalElements;
+
+          if(Array.isArray(result.items) && result.items.length > 0) {
+            result.items.forEach(item => {
+              finalResult.items.push(item);
+            });
+            console.log("final result (all concepts from certain refsets):", finalResult);
+
+          }
+
+        }));
+
+        return finalResult;
+      }
+
+      
+      return ({} as any) as Readonly<IConceptResult>;
+    });
+  }, [query, branch, referenceSet]); 
+
+  /*const request = useAsync(async () => {
     if (host && branch && query) {
       return debouncedSearch(host, branch, query, referenceSet || "");
     }
     return ({} as any) as Readonly<IConceptResult>;
-  }, [query, branch, referenceSet]); // Ensure a new request is made everytime the text changes (even if it's debounced)
+  }, [query, branch, referenceSet]); */ // Ensure a new request is made everytime the text changes (even if it's debounced)
 
   // Return everything needed for the hook consumer
   return {
@@ -111,7 +167,10 @@ const Search = ({ scope }: SearchProps) => {
   };
 
   const branches = branchRequest.result || [];
-  const { totalElements = 0, items = [] } = searchRequest.result || {};
+  const { 
+    totalElements = 0, 
+    items = [] 
+  } = searchRequest.result || {};
 
   return (
     <div className="container">

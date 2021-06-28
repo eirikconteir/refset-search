@@ -3,12 +3,10 @@ export const clinicalTrialsUrl =
 
 export const episerverUrl = "http://localhost:51338/sokeside/snomed";
 
-export const defaultBranch = "MAIN/SNOMEDCT-NO";
+export const defaultBranch = 'MAIN/SNOMEDCT-NO/HELSEBIBLIOTEKET';
 
 export const hosts = [
-  "https://snowstorm.conteir.no",
-  "https://snowstorm.rundberg.no",
-  "https://test.terminologi.ehelse.no",
+  "https://snowstorm.conteir.no"
 ];
 
 export const codeSystems = [
@@ -22,8 +20,13 @@ export const codeSystems = [
     id: "447562003",
     title: "ICD-10",
   },
-  {
+/*  {
     branch: "MAIN/MAP",
+    id: "2041000202101",
+    title: "ATC",
+  }, */
+  {
+    branch: "MAIN/SNOMEDCT-NO/HELSEBIBLIOTEKET",
     id: "2041000202101",
     title: "ATC",
   },
@@ -35,33 +38,40 @@ export const referenceSets = [
     title: "[Not specified]",
   },
   {
-    id: "1991000202102",
-    title: "Sykdommer",
+    id: '23951000202100',
+    title: 'Legemidler - 23951000202100',
   },
   {
-    id: "2001000202104",
-    title: "Symptomer/plager",
+    id: '23941000202103',
+    title: 'Målgrupper - 23941000202103',
   },
   {
-    id: "23921000202107",
-    title: "Virkestoff",
+    id: '23971000202106',
+    title: 'Saturday night fever (rusmidler) - 23971000202106',
   },
   {
-    id: "12711000202103",
-    title: "Modifikatorer",
+    id: '23981000202108',
+    title: 'Toxic beauty (planter) - 23981000202108',
+  }
+];
+
+export const certainReferenceSets = [
+  {
+    id: "",
+    title: "[Not specified]",
   },
   {
-    id: "23911000202104",
-    title: "Mengdeangivelse",
+    id: '23951000202100',
+    title: 'Legemidler - 23951000202100',
   },
   {
-    id: "12881000202101",
-    title: "Legemidler",
+    id: '23971000202106',
+    title: 'Saturday night fever (rusmidler) - 23971000202106',
   },
   {
-    id: "23961000202102",
-    title: "Administrasjonvei",
-  },
+    id: '23981000202108',
+    title: 'Toxic beauty (planter) - 23981000202108',
+  }
 ];
 
 export const limit = "10";
