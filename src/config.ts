@@ -26,7 +26,7 @@ export const codeSystems = [
     branch: "MAIN/MAP",
     id: "2041000202101",
     title: "ATC",
-  }
+  },
 ];
 
 export const referenceSets = [
@@ -63,12 +63,16 @@ export const referenceSets = [
     title: "Infeksjonssykdommer følsomme for antibiotika",
   },
   {
-    id: "2041000202101",
-    title: "Kristines hipster refset",
-  },
-  {
     id: "1311000202107",
     title: "Virkestoff med antibakteriell eller antimykotisk effekt",
+  },
+  {
+    id: "12711000202103",
+    title: "Modifikatorer",
+  },
+  {
+    id: "12881000202101",
+    title: "Legemidler antibiotika",
   },
 ];
 
